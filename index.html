@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="content">
+        <h1 class="header blink" id="header-text"></h1>
+        <h2>STUDENT | LEARNER</h2>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae et quod repudiandae
+            laborum nesciunt esse, ab nam incidunt delectus ipsa. Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Porro beatae quibusdam
+            ipsum dolorum nobis eveniet voluptatem, autem aperiam eum et iste iure nostrum fugiat, dignissimos saepe
+            est, facilis minima ipsa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, nesciunt.</p>
+        <h3 class="playlist-title">Listen to My Playlist Music</h3>
+        <p class="interests">Interest: Web Design, Computer Science, OSINT, Geoint, Socmint, Social Media Analytics,
+            Data Analyst,
+            SDR, Satellite Imagery, ISR, and Digital Forensics
+        </p>
+        <p class="skills">Skill: Nothing</p>
+
+        <h3 class="fun-facts-title">Random Fun Facts About Me</h3>
+        <ul class="fun-facts">
+            <li>I am Human</li>
+            <li>I Breathe</li>
+            <li>I am Alive</li>
+        </ul>
+
+        <ul class="links">
+            <p class="links-title">My Links</p>
+            <li><a href="#" class="link-item"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="#" class="link-item"><i class="fab fa-github"></i> Github</a></li>
+            <li><a href="#" class="link-item"><i class="fab fa-twitter"></i> Twitter/X</a></li>
+        </ul>
+        <blockquote style="color: rgb(0, 255, 149); text-align: center;">"All I Know is That I Know Nothing"
+        </blockquote>
+    </div>
+
+    <script>
+        const textArray = ["DIKA MAULIDAL_"];
+        const typingSpeed = 150;
+        const deletingSpeed = 100;
+        const delayBeforeDelete = 500;
+        const delayBeforeTypeAgain = 500;
+        let index = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const headerElement = document.getElementById("header-text");
+            const currentText = textArray[index];
+
+            if (isDeleting) {
+                headerElement.textContent = currentText.substring(0, charIndex--);
+            } else {
+                headerElement.textContent = currentText.substring(0, charIndex++);
+            }
+
+            headerElement.classList.add('blink');
+
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => isDeleting = true, delayBeforeDelete);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % textArray.length;
+                setTimeout(type, delayBeforeTypeAgain);
+                return;
+            }
+
+            setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            type();
+        });
+    </script>
+</body>
+
+</html>

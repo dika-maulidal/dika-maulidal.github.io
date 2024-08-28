@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header {
+    color: rgb(0, 255, 149);
+    font-size: 2.5rem;
+}
+
+.content {
+    margin: 5% 10%;
+    color: rgb(0, 255, 149);
+}
+
+h2 {
+    color: rgb(0, 255, 149);
+}
+
+p,
+h3,
+ul,
+h2 {
+    margin-bottom: 1.5rem;
+}
+
+.description,
+.interests,
+.skills {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.playlist-title {
+    text-decoration: underline;
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+}
+
+.links-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.link-item {
+    text-decoration: none;
+    color: rgb(0, 255, 149);
+    font-size: 1.1rem;
+    display: block;
+    margin: 0.3rem 0;
+}
+
+.link-item:hover {
+    text-decoration: underline;
+}
+
+.link-item i {
+    margin-right: 0.5rem;
+}
+
+.header {
+    height: 50px;
+    white-space: nowrap;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: rgb(0, 255, 149);
+    }
+}
