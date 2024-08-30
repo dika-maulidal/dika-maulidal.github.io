@@ -6,23 +6,26 @@ body {
 }
 
 .header {
-    color: rgb(0, 255, 149);
+    color: rgb(0, 191, 255);
     font-size: 2.5rem;
+    height: 50px;
+    white-space: nowrap;
 }
 
 .content {
     margin: 5% 10%;
-    color: rgb(0, 255, 149);
+    color: rgb(0, 191, 255);
+    text-align: left;
 }
 
-h2 {
-    color: rgb(0, 255, 149);
+.content h2 {
+    color: rgb(0, 191, 255);
 }
 
-p,
-h3,
-ul,
-h2 {
+.content p,
+.content h3,
+.content ul,
+.content h2 {
     margin-bottom: 1.5rem;
 }
 
@@ -49,7 +52,7 @@ h2 {
 
 .link-item {
     text-decoration: none;
-    color: rgb(0, 255, 149);
+    color: rgb(0, 191, 255);
     font-size: 1.1rem;
     display: block;
     margin: 0.3rem 0;
@@ -63,19 +66,74 @@ h2 {
     margin-right: 0.5rem;
 }
 
-.header {
-    height: 50px;
-    white-space: nowrap;
+@media (max-width: 768px) {
+    .content {
+        margin: 5%;
+    }
+
+    .header {
+        font-size: 2rem;
+    }
+
+    .description,
+    .interests,
+    .skills {
+        font-size: 0.9rem;
+    }
+
+    .link-item {
+        font-size: 1rem;
+    }
 }
 
-@keyframes blink {
+@media (max-width: 480px) {
+    .content {
+        margin: 3%;
+    }
 
-    from,
-    to {
-        border-color: transparent;
+    .header {
+        font-size: 1.8rem;
+    }
+
+    .description,
+    .interests,
+    .skills {
+        font-size: 0.8rem;
+    }
+
+    .link-item {
+        font-size: 0.9rem;
+    }
+
+    .links,
+    .fun-facts,
+    .playlist-title,
+    .links-title {
+        text-align: left;
+    }
+
+    .links-title {
+        margin-bottom: 1rem;
+    }
+}
+
+.header.blink::after {
+    content: "|";
+    animation: blinkCursor 0.7s steps(2) infinite;
+    display: inline-block;
+    margin-left: 2px;
+}
+
+@keyframes blinkCursor {
+    0% {
+        opacity: 1;
     }
 
     50% {
-        border-color: rgb(0, 255, 149);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
