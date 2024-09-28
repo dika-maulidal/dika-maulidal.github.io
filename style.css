@@ -124,6 +124,22 @@ body {
     margin-left: 2px;
 }
 
+.fun-facts a {
+    text-decoration: none;
+    color: rgb(0, 191, 255);
+}
+
+.fun-facts a:hover {
+    text-decoration: underline;
+}
+
+.img {
+    height: 250px;
+    display: block;
+    margin: auto;
+}
+
+
 @keyframes blinkCursor {
     0% {
         opacity: 1;
