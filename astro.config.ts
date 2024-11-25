@@ -8,7 +8,9 @@ import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: SITE.website,
+  site: import.meta.env.DEV
+  ? "http://localhost:4321"
+  : "https://abcdefvk.github.io/",
   integrations: [
     tailwind({
       applyBaseStyles: false,
