@@ -1,7 +1,7 @@
 ---
 author: Dika Maulidal
 pubDatetime: 2022-09-23T04:58:53Z
-modDatetime: 2024-10-14T09:27:28.605Z
+modDatetime: 2024-11-28T09:27:28.605Z
 title: How to Use Sherlock for OSINT by Username
 slug: osint
 featured: true
@@ -13,6 +13,8 @@ description: Panduan sederhana menggunakan Sherlock untuk melakukan pencarian OS
 ---
 
 **OSINT** (Open Source Intelligence) adalah teknik pengumpulan informasi dari sumber yang tersedia untuk umum. Informasi ini dapat berupa media sosial, blog, forum, situs web, atau data lainnya yang dapat diakses tanpa memerlukan otorisasi khusus. OSINT banyak digunakan dalam investigasi digital untuk menemukan jejak online seseorang, misalnya berdasarkan nama pengguna, alamat email, atau informasi publik lainnya.
+
+## Table of Contents
 
 ![Sherlock Logo](https://github.com/sherlock-project/sherlock/raw/master/docs/images/sherlock-logo.png)
 
@@ -57,7 +59,7 @@ Setelah instalasi selesai, Anda dapat langsung menggunakan Sherlock untuk mencar
 #### Contoh Perintah Pencarian
 Gunakan perintah berikut untuk mencari username tertentu:
 ```
-python -m sherlock username
+python -m sherlock_projeck username
 ```
 Contoh Output :
 ```
