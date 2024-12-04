@@ -59,7 +59,7 @@ Setelah instalasi selesai, Anda dapat langsung menggunakan Sherlock untuk mencar
 #### Contoh Perintah Pencarian
 Gunakan perintah berikut untuk mencari username tertentu:
 ```
-python -m sherlock_projeck username
+python -m sherlock_project username
 ```
 Contoh Output :
 ```
