@@ -31,10 +31,10 @@ Dari hasil *scraping*, berikut adalah contoh data yang diperoleh:
 ## **Text Analytics ?**  
 *Text analytics* adalah proses mengolah data tekstual tidak terstruktur menjadi informasi bermakna yang dapat dianalisis. Teknik ini digunakan untuk menemukan pola, tren, dan wawasan dari data dalam skala besar. 
 
-Berikut adalah hasil analisis kami berdasarkan dataset yang tersedia:
+Berikut adalah hasil analisis berdasarkan dataset yang tersedia:
 
 ### **1. Word Cloud Analysis**  
-![Word Cloud](/src/assets/images/word_cloud.png)
+![Word Cloud](https://i.imgur.com/7tuo3fc.png)
 Berdasarkan *word cloud* yang dianalisis, terlihat bahwa beberapa kata kunci muncul dengan frekuensi tinggi, menunjukkan tema utama diskusi akun *Fufufafa* di platform Kaskus. Kata-kata berikut menjadi pusat perhatian:
 
 - **Nama tokoh politik:** Kata seperti *"Jokowi"* dan *"Prabowo"* mendominasi, mengindikasikan fokus pada diskusi politik dan tokoh pemimpin di Indonesia.
@@ -46,7 +46,7 @@ Secara keseluruhan, *word cloud* ini mengindikasikan bahwa diskusi yang melibatk
 
 
 ### **2. Bigram Analysis**  
-![Bigram](/src/assets/images/top_bigram_postingan_fufufafa.png)
+![Bigram](https://i.imgur.com/LOBGsCq.png)
 Visualisasi bigram menunjukkan frasa dua kata yang paling sering muncul dalam postingan. Bigram yang mendominasi adalah:
 - **"hidup prabowo"**
 - **"om wowo"**
@@ -56,8 +56,8 @@ Visualisasi bigram menunjukkan frasa dua kata yang paling sering muncul dalam po
 Bigram seperti **"hidup prabowo"** dan **"om wowo"** mencerminkan dukungan terhadap tokoh tertentu, sedangkan frasa seperti **"ts bodoh"** dan **"tidak gentar"** mengindikasikan opini atau reaksi emosional dari pengguna.
 
 ### **3. Sentiment Analysis**  
-![Sentiment Distribution](/src/assets/images/sentiment_distribution_fufufafa.png)
-Kami menggunakan pendekatan *lexicon-based sentiment analysis* untuk menganalisis sentimen dari setiap postingan. Dengan memanfaatkan kamus sentimen dari [Repository GitHub](https://github.com/username/repository-name), setiap kata diberi bobot positif atau negatif berdasarkan makna emosionalnya.
+![Sentiment Distribution](https://i.imgur.com/qkoPmuK.png)
+Tahap ini menggunakan pendekatan *lexicon-based sentiment analysis* untuk menganalisis sentimen dari setiap postingan. Dengan memanfaatkan kamus sentimen dari [Repository GitHub](https://github.com/username/repository-name), setiap kata diberi bobot positif atau negatif berdasarkan makna emosionalnya.
 
 Berikut adalah contoh hasil analisis sentimen untuk lima konten:  
 
@@ -74,11 +74,11 @@ Berikut adalah contoh hasil analisis sentimen untuk lima konten:
 ### **4. Time Series Analysis**  
 Analisis ini dilakukan dalam dua bagian:  
 1. **Time Series Berdasarkan Postingan:**  
-![Trend Posting](/src/assets/images/trend_jumlah_postingan_fufufafa.png)
+![Trend Posting](https://i.imgur.com/31IDspO.png)
    Aktivitas posting mencapai puncaknya pada tahun **2014** bulan **mei**, bertepatan dengan menjelangnya peristiwa pemilu di Indonesia.
 
 2. **Time Series Berdasarkan Sentimen:**  
-![Trend Sentiment](/src/assets/images/trend_sentimen_fufufafa.png)
+![Trend Sentiment](https://i.imgur.com/29n1nIZ.png)
 - **Sentimen negatif** memiliki frekuensi tertinggi selama periode puncak, mengindikasikan bahwa akun ini banyak memberikan kritik atau pandangan negatif pada periode tersebut.
 - **Sentimen netral** berada di posisi kedua, menunjukkan adanya diskusi informatif atau opini yang tidak terlalu polar.
 - **Sentimen positif** meskipun lebih sedikit, tetap menunjukkan bahwa akun ini juga memberikan pandangan yang mendukung atau optimis pada beberapa kesempatan.
@@ -88,10 +88,10 @@ Kesimpulannya, aktivitas akun **fufufafa** di Kaskus sangat dipengaruhi oleh mom
 ---
 
 ## **Kesimpulan**  
-Melalui analisis ini, kami menemukan pola komunikasi yang dinamis dari akun Fufufafa di Kaskus. Aktivitas akun ini menunjukkan lonjakan besar pada pertengahan tahun 2019, yang kemungkinan terkait dengan peristiwa politik penting, dengan fokus pada diskusi tokoh politik tertentu seperti terlihat dari bigram dominan, misalnya "hidup prabowo" dan "prabowo pemimpin."
+Melalui analisis ini, dapat menemukan pola komunikasi yang dinamis dari akun Fufufafa di Kaskus. Aktivitas akun ini menunjukkan lonjakan besar pada pertengahan tahun 2019, yang kemungkinan terkait dengan peristiwa politik penting, dengan fokus pada diskusi tokoh politik tertentu seperti terlihat dari bigram dominan, misalnya "hidup prabowo" dan "prabowo pemimpin."
 
 Sentimen yang muncul pada periode tersebut cenderung didominasi oleh sentimen negatif, meskipun sentimen netral juga signifikan. Hal ini menunjukkan bahwa diskusi pada saat itu kemungkinan besar melibatkan kritik atau debat yang intens terhadap isu-isu yang sedang hangat.
 
 Pendekatan berbasis data ini memberikan wawasan objektif tentang pola komunikasi akun tersebut. Walaupun terdapat keterbatasan dalam analisis sentimen berbasis *lexicon-based sentiment analysis*, hasil ini tetap memberikan gambaran umum yang relevan.
 
-Penelitian ini menunjukkan bahwa *text analytics* adalah alat yang efektif untuk memahami pola komunikasi dan tren di platform digital.
+Oleh karena itu, *text analytics* dapat dianggap sebagai alat yang efektif untuk memahami pola komunikasi dan tren di platform digital.
