@@ -57,7 +57,7 @@ Bigram seperti **"hidup prabowo"** dan **"om wowo"** mencerminkan dukungan terha
 
 ### **3. Sentiment Analysis**  
 ![Sentiment Distribution](https://i.imgur.com/qkoPmuK.png)
-Tahap ini menggunakan pendekatan *lexicon-based sentiment analysis* untuk menganalisis sentimen dari setiap postingan. Dengan memanfaatkan kamus sentimen dari [Repository GitHub](https://github.com/username/repository-name), setiap kata diberi bobot positif atau negatif berdasarkan makna emosionalnya.
+Tahap ini menggunakan pendekatan *lexicon-based sentiment analysis* untuk menganalisis sentimen dari setiap postingan. Dengan memanfaatkan kamus sentimen dari [Repository GitHub](https://github.com/fajri91/InSet), setiap kata diberi bobot positif atau negatif berdasarkan makna emosionalnya.
 
 Berikut adalah contoh hasil analisis sentimen untuk lima konten:  
 
@@ -88,7 +88,7 @@ Kesimpulannya, aktivitas akun **fufufafa** di Kaskus sangat dipengaruhi oleh mom
 ---
 
 ## **Kesimpulan**  
-Melalui analisis ini, dapat menemukan pola komunikasi yang dinamis dari akun Fufufafa di Kaskus. Aktivitas akun ini menunjukkan lonjakan besar pada pertengahan tahun 2019, yang kemungkinan terkait dengan peristiwa politik penting, dengan fokus pada diskusi tokoh politik tertentu seperti terlihat dari bigram dominan, misalnya "hidup prabowo" dan "prabowo pemimpin."
+Melalui analisis ini, dapat menemukan pola komunikasi yang dinamis dari akun Fufufafa di Kaskus. Aktivitas akun ini menunjukkan lonjakan besar pada pertengahan tahun 2014, yang kemungkinan terkait dengan peristiwa politik penting, dengan fokus pada diskusi tokoh politik tertentu seperti terlihat dari bigram dominan, misalnya "hidup prabowo" dan "prabowo pemimpin."
 
 Sentimen yang muncul pada periode tersebut cenderung didominasi oleh sentimen negatif, meskipun sentimen netral juga signifikan. Hal ini menunjukkan bahwa diskusi pada saat itu kemungkinan besar melibatkan kritik atau debat yang intens terhadap isu-isu yang sedang hangat.
 
