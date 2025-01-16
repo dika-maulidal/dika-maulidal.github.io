@@ -10,7 +10,7 @@ import { SITE } from "./src/config";
 export default defineConfig({
   site: import.meta.env.DEV
   ? "http://localhost:4321"
-  : "https://abcdefvk.github.io/",
+  : "https://dika-maulidal.github.io/",
   integrations: [
     tailwind({
       applyBaseStyles: false,

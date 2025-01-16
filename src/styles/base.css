@@ -20,6 +20,15 @@
     --color-card-muted: 12, 14, 79;
     --color-border: 48, 63, 138;
   }
+  .border-primary {
+    border-color: rgb(var(--color-border)); /* Apply border color from the theme */
+  }
+  .border-dashed {
+    border-style: dashed; 
+  }
+  .rounded-lg {
+    border-radius: 10px; 
+  }
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
     display: none;
