@@ -1,60 +1,50 @@
-name: CI
+name: Deploy Astro Paper to GitHub Pages
 
 on:
-  pull_request:
-    types:
-      - opened
-      - edited
-      - synchronize
-      - reopened
   push:
     branches:
-      - main  # Sesuaikan dengan branch utama Anda
-  workflow_call:
+      - main
+  
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
-    name: Code standards & build
     runs-on: ubuntu-latest
-    timeout-minutes: 3
-
-    strategy:
-      matrix:
-        node-version: [20]
-
     steps:
-      - name: "☁️ Checkout repository"
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: "📦 Install pnpm"
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: "pnpm"
+          node-version: 18
+          cache: 'npm'
 
-      - name: "📦 Install dependencies"
-        run: pnpm install
+      - name: Install dependencies
+        run: npm install
 
-      - name: "🔎 Lint code"
-        run: pnpm run lint
+      - name: Build Astro site
+        run: npm run build
+        env:
+          SITE: 'https://dika-maulidal.github.io/'
 
-      - name: "📝 Checking code format"
-        run: pnpm run format:check
-
-      - name: "🚀 Build the project"
-        run: pnpm run build
-
-      - name: "📤 Upload Artifact"
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: "./dist"  # Menggunakan path: "./dist"
+          path: "./dist"
 
-      - name: "🚀 Deploy to GitHub Pages"
-        uses: actions/deploy-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
