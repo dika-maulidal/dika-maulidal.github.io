@@ -12,6 +12,8 @@ tags:
 description: Panduan sederhana menggunakan Sherlock untuk melakukan pencarian OSINT berdasarkan username.
 ---
 
+![sherlock](https://miro.medium.com/v2/resize:fit:512/1*_BTn9cEys4d3ywrX7e0OBA.png)
+
 **OSINT** (Open Source Intelligence) adalah teknik pengumpulan informasi dari sumber yang tersedia untuk umum. Informasi ini dapat berupa media sosial, blog, forum, situs web, atau data lainnya yang dapat diakses tanpa memerlukan otorisasi khusus. OSINT banyak digunakan dalam investigasi digital untuk menemukan jejak online seseorang, misalnya berdasarkan nama pengguna, alamat email, atau informasi publik lainnya.
 
 ## Table of Contents
