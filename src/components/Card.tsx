@@ -17,7 +17,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
   };
 
   return (
-    <div className="border-dashed border-2 rounded-lg border-primary mt-4 p-4">
+    <div className="rounded-lg mt-4 p-4 border border-white/20 bg-white/10 shadow-lg transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(255,255,255,0.2)]">
       <li className="my-1">
         <a
           href={href}
