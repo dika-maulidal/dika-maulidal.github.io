@@ -28,6 +28,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Debug: Cek hasil build
+        run: ls -lah dist || echo "Folder dist tidak ditemukan!"
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
@@ -37,12 +40,23 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: build_output
           path: dist
 
+      - name: Debug: Cek apakah artifact berhasil di-download
+        run: ls -lah dist || echo "Folder dist tidak ditemukan!"
+
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v2
