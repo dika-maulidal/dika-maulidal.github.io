@@ -10,7 +10,7 @@ export interface Props {
 const { activeNav } = Astro.props;
 ---
 
-<header>
+<header id="navbar" class="sticky top-0 z-50 transition-all duration-300 bg-transparent">
   <a id="skip-to-content" href="#main-content">Skip to content</a>
   <div class="nav-container">
     <div class="top-nav-wrap">
@@ -159,7 +159,7 @@ const { activeNav } = Astro.props;
     @apply mx-auto flex max-w-3xl flex-col items-center justify-between sm:flex-row;
   }
   .top-nav-wrap {
-    @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;
+    @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-5;
   }
   .logo {
     @apply absolute py-1 text-xl font-semibold sm:static sm:text-2xl;
@@ -247,4 +247,19 @@ const { activeNav } = Astro.props;
 
   // Runs on view transitions navigation
   document.addEventListener("astro:after-swap", toggleNav);
+
+    window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 10) {
+      navbar.classList.remove('bg-transparent');
+      navbar.classList.add(
+        'bg-black/30',     // semi transparan
+        'backdrop-blur-md', // efek blur
+        'shadow-md'        // sedikit bayangan
+      );
+    } else {
+      navbar.classList.remove('bg-black/30', 'backdrop-blur-md', 'shadow-md');
+      navbar.classList.add('bg-transparent');
+    }
+  });
 </script>
