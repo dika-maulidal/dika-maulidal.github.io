@@ -16,6 +16,8 @@ description: Panduan singkat menggunakan Maigret untuk investigasi OSINT berbasi
 ## Apa Itu Maigret?
 **Maigret** adalah alat OSINT (Open Source Intelligence) yang dirancang untuk melakukan pencarian informasi berdasarkan nama pengguna (username) di berbagai layanan online. Alat ini dapat membantu dalam investigasi digital dengan mengumpulkan data yang tersedia secara publik dari berbagai situs web.
 
+## Table of Contents
+
 ## Persiapan Sebelum Instalasi
 Sebelum menginstal Maigret, pastikan sistem Anda telah memiliki **Python**.  
 Cek versi Python dengan perintah berikut:
