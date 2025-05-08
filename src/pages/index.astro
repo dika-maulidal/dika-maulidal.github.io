@@ -9,6 +9,8 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SITE, SOCIALS } from "@config";
+import projects from "../projects";
+import CardProject from "../components/CardProject.astro";
 
 const posts = await getCollection("blog");
 
@@ -48,30 +50,32 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
     <Hr />
 
-    {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured">
-            <h2>Featured</h2>
-            <ul>
-              {featuredPosts.map(({ data, slug }) => (
-                <Card
-                  href={`/posts/${slug}/`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
-            </ul>
-          </section>
-          {recentPosts.length > 0 && <Hr />}
-        </>
-      )
-    }
-
+    <section id="projects">
+      <h2>Projects</h2>
+      <h5 style="margin-bottom: 18px; margin-top: -12px">My Personal Project</h5>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {
+          projects.map(project => (
+            <CardProject 
+              title={project.title}
+              image={project.image}
+              tech={project.tech}
+              previewUrl={project.previewUrl}
+              githubUrl={project.githubUrl}
+              description={project.description}
+            />
+          ))
+        }
+      </div>
+    </section>
+    
+    <Hr />
+    
     {
       recentPosts.length > 0 && (
         <section id="recent-posts">
           <h2>Recent Posts</h2>
+          <h5>My Blog Posts</h5>
           <ul>
             {recentPosts.map(
               ({ data, slug }, index) =>
@@ -105,6 +109,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
 <style>
   /* ===== Hero Section ===== */
+  #projects {
+  @apply pb-6 pt-12;
+}
+#projects h2 {
+  @apply text-2xl font-semibold tracking-wide mb-4;
+}
+
   #hero {
     @apply pb-6 pt-8;
   }

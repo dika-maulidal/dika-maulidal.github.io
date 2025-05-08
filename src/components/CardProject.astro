@@ -1,0 +1,155 @@
+---
+interface Props {
+  title: string;
+  image: string;
+  tech: string[];
+  previewUrl: string;
+  githubUrl: string;
+  description: string;
+}
+
+const { title, image, tech, previewUrl, githubUrl, description } = Astro.props;
+
+// Map tech names to Iconify icon names
+const techIcons: Record<string, string> = {
+  Python: "logos:python",
+  "Fuzzy Logic": "carbon:machine-learning",
+  Streamlit: "simple-icons:streamlit",
+  Astro: "logos:astro-icon",
+  "Tailwind CSS": "logos:tailwindcss-icon",
+  HTML: "logos:html-5",
+  VSCode: "logos:visual-studio-code",
+  ChatGPT: "arcticons:openai-chatgpt"
+};
+---
+
+<article class="project-card grid grid-cols-1 sm:grid-cols-2 gap-6">
+  <div class="image-frame col-span-1">
+    <img src={image} alt={title} class="project-image" />
+  </div>
+
+  <div class="project-content col-span-1 flex flex-col gap-4">
+    <h3 class="project-title">{title}</h3>
+
+    <ul class="tech-list">
+      {
+        tech.map(techItem => (
+          <li class="tech-item">
+            {techItem === "Beautiful Soup" ? (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="tech-icon" role="img">
+                <title>BeautifulSoup</title>
+                <path d="M2 12a10 10 0 1020 0H2zm16.8 2c-.9 1.8-3.5 3-6.8 3s-5.9-1.2-6.8-3h13.6zM10 5s-.5 1 .5 2S10 9 10 9s-.5-1 .5-2S10 5 10 5zm4 0s-.5 1 .5 2S14 9 14 9s-.5-1 .5-2S14 5 14 5z"/>
+              </svg>
+            ) : techItem === "ChatGPT" ? (
+              <img
+                src={`https://api.iconify.design/arcticons:openai-chatgpt.svg?color=white`}
+                alt={`${techItem} icon`}
+                class="tech-icon"
+              />
+            ) : techIcons[techItem] ? (
+              <img
+                src={`https://api.iconify.design/${techIcons[techItem]}.svg`}
+                alt={`${techItem} icon`}
+                class="tech-icon"
+              />
+            ) : (
+              <span class="tech-icon placeholder">?</span>
+            )}
+            <span>{techItem}</span>
+          </li>
+        ))
+      }
+    </ul>    
+
+    <p class="project-description">{description}</p>
+
+    <div class="project-links">
+      <a href={previewUrl} target="_blank" rel="noopener noreferrer" class="link-button">
+        <img
+          src="https://api.iconify.design/carbon:launch.svg?color=white"
+          alt="Preview icon"
+          class="link-icon"
+        />
+        Preview
+      </a>
+      <a href={githubUrl} target="_blank" rel="noopener noreferrer" class="link-button">
+        <img
+          src="https://api.iconify.design/simple-icons:github.svg?color=white"
+          alt="GitHub icon"
+          class="link-icon"
+        />
+        GitHub
+      </a>
+    </div>
+  </div>
+</article>
+
+<style>
+  .project-card {
+    @apply mb-6 rounded-lg p-4 shadow-md;
+    background: rgba(59, 130, 246, 0.1); /* Glassmorphism biru (blue-500) */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(59, 130, 246, 0.3); /* Border biru transparan */
+  }
+
+  .image-frame {
+    @apply h-48 w-full rounded overflow-hidden;
+  }
+
+  .project-image {
+    @apply h-full w-full object-cover transition-transform duration-300 hover:scale-105;
+  }
+
+  .project-title {
+    @apply text-xl font-semibold text-blue-100; /* Biru muda untuk judul */
+  }
+
+  .project-description {
+    @apply text-blue-300; /* Biru sedang untuk deskripsi */
+  }
+
+  .tech-list {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .tech-item {
+    @apply flex items-center rounded-sm bg-blue-300/30 border border-blue-300/30 px-2 py-0.5 text-xs text-blue-100;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .tech-item:hover {
+    @apply bg-blue-300/30 border-blue-300/50 text-blue-300;
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+  }
+
+  .tech-icon {
+    @apply mr-1 h-4 w-4;
+  }
+
+  .tech-icon.placeholder {
+    @apply inline-block text-center text-blue-100; /* Match dengan teks tech */
+  }
+
+  .project-links {
+    @apply flex gap-4;
+  }
+
+  .link-button {
+    @apply flex items-center gap-2 rounded-md border border-blue-300/30 px-3 py-1 text-sm text-blue-100;
+    background: rgba(59, 130, 246, 0.2); /* Glassmorphism biru */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .link-button:hover {
+    @apply bg-blue-500/30 border-blue-300/50 text-blue-300;
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+  }
+
+  .link-icon {
+    @apply h-5 w-5;
+  }
+</style>

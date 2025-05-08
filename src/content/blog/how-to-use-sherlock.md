@@ -4,7 +4,7 @@ pubDatetime: 2022-09-23T04:58:53Z
 modDatetime: 2024-11-28T09:27:28.605Z
 title: How to Use Sherlock for OSINT by Username
 slug: osint
-featured: true
+featured: false
 draft: false
 tags:
   - osint

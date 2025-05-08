@@ -3,7 +3,7 @@ author: Dika Maulidal
 pubDatetime: 2024-12-4T09:10:53Z
 title: Text Analytics pada Akun FUFUFAFA pada Platform KASKUS
 slug: fufufafa
-featured: true
+featured: false
 tags:
   - text-analytics
   - text-mining
