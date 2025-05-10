@@ -251,12 +251,10 @@ const { activeNav } = Astro.props;
       navbar.classList.add(
         'bg-blue-500/20',   // Glassmorphism biru
         'backdrop-blur-md',  // Efek blur
-        'border-b',          // Border bawah
         'border-blue-300/30', // Border biru transparan
-        'shadow-md'          // Bayangan
       );
     } else {
-      navbar.classList.remove('bg-blue-500/20', 'backdrop-blur-md', 'border-b', 'border-blue-300/30', 'shadow-md');
+      navbar.classList.remove('bg-blue-500/20', 'backdrop-blur-md', 'border-blue-300/30');
       navbar.classList.add('bg-transparent');
     }
   });

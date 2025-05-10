@@ -17,7 +17,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
   };
 
   return (
-    <div className="rounded-lg mt-4 p-4 border border-blue-300/30 bg-blue-500/20 backdrop-blur-md">
+    <div className="rounded-lg mt-4 p-4 border border-blue-300/20 bg-blue-500/10">
       <li className="my-1">
         <a
           href={href}
@@ -36,7 +36,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
             <a
               key={tag}
               href={`/tags/${tag}/`}
-              className="inline-block text-sm font-medium text-blue-100 bg-blue-500/20 border border-blue-300/30 px-3 py-1 mr-2 mt-1 rounded-md backdrop-blur-md shadow-sm transition-all duration-300 hover:bg-blue-500/30 hover:border-blue-300/50 hover:text-blue-300 hover:shadow-[0_0_12px_rgba(59,130,246,0.3)]"
+              className="inline-block text-sm font-medium text-blue-100 bg-blue-500/15 border border-blue-300/20 px-3 py-1 mr-2 mt-1 rounded-md transition-all duration-200 hover:bg-blue-500/25 hover:border-blue-300/40 hover:text-blue-50"
             >
               {tag}
             </a>

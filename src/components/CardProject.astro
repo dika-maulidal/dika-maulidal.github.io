@@ -88,7 +88,6 @@ const techIcons: Record<string, string> = {
   .project-card {
     @apply mb-6 rounded-lg p-4 shadow-md;
     background: rgba(59, 130, 246, 0.1); /* Glassmorphism biru (blue-500) */
-    backdrop-filter: blur(10px);
     border: 1px solid rgba(59, 130, 246, 0.3); /* Border biru transparan */
   }
 
@@ -113,15 +112,12 @@ const techIcons: Record<string, string> = {
   }
 
   .tech-item {
-    @apply flex items-center rounded-sm bg-blue-300/30 border border-blue-300/30 px-2 py-0.5 text-xs text-blue-100;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    @apply flex items-center rounded-sm bg-blue-300/20 border border-blue-300/20 px-2 py-0.5 text-xs text-blue-100;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   }
 
   .tech-item:hover {
-    @apply bg-blue-300/30 border-blue-300/50 text-blue-300;
-    box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+    @apply bg-blue-300/40 border-blue-300/40 text-blue-50;
   }
 
   .tech-icon {
@@ -137,16 +133,13 @@ const techIcons: Record<string, string> = {
   }
 
   .link-button {
-    @apply flex items-center gap-2 rounded-md border border-blue-300/30 px-3 py-1 text-sm text-blue-100;
-    background: rgba(59, 130, 246, 0.2); /* Glassmorphism biru */
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    @apply flex items-center gap-2 rounded-md border border-blue-300/20 px-3 py-1 text-sm text-blue-100;
+    background: rgba(59, 130, 246, 0.15); /* Latar biru transparan */
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   }
 
   .link-button:hover {
-    @apply bg-blue-500/30 border-blue-300/50 text-blue-300;
-    box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+    @apply bg-blue-500/30 border-blue-500/40 text-blue-50;
   }
 
   .link-icon {
