@@ -64,7 +64,7 @@ const techIcons: Record<string, string> = {
     <p class="project-description">{description}</p>
 
     <div class="project-links">
-      <a href={previewUrl} target="_blank" rel="noopener noreferrer" class="link-button">
+      <a href={previewUrl} target="_blank" rel="noopener noreferrer" class="link-button preview-button">
         <img
           src="https://api.iconify.design/carbon:launch.svg?color=white"
           alt="Preview icon"
@@ -72,7 +72,7 @@ const techIcons: Record<string, string> = {
         />
         Preview
       </a>
-      <a href={githubUrl} target="_blank" rel="noopener noreferrer" class="link-button">
+      <a href={githubUrl} target="_blank" rel="noopener noreferrer" class="link-button github-button">
         <img
           src="https://api.iconify.design/simple-icons:github.svg?color=white"
           alt="GitHub icon"
@@ -112,12 +112,8 @@ const techIcons: Record<string, string> = {
   }
 
   .tech-item {
-    @apply flex items-center rounded-sm bg-blue-300/20 border border-blue-300/20 px-2 py-0.5 text-xs text-blue-100;
+    @apply flex items-center rounded-sm bg-blue-300/40 border border-blue-300/40 px-2 py-0.5 text-xs text-blue-50;
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-  }
-
-  .tech-item:hover {
-    @apply bg-blue-300/40 border-blue-300/40 text-blue-50;
   }
 
   .tech-icon {
@@ -125,7 +121,7 @@ const techIcons: Record<string, string> = {
   }
 
   .tech-icon.placeholder {
-    @apply inline-block text-center text-blue-100; /* Match dengan teks tech */
+    @apply inline-block text-center text-blue-100;
   }
 
   .project-links {
@@ -134,13 +130,26 @@ const techIcons: Record<string, string> = {
 
   .link-button {
     @apply flex items-center gap-2 rounded-md border border-blue-300/20 px-3 py-1 text-sm text-blue-100;
-    background: rgba(59, 130, 246, 0.15); /* Latar biru transparan */
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   }
 
-  .link-button:hover {
+  .preview-button {
+    background: rgba(59, 130, 246, 0.15); 
+  }
+
+  .preview-button:hover {
     @apply bg-blue-500/30 border-blue-500/40 text-blue-50;
   }
+
+.github-button {
+  background: rgba(0, 64, 255, 0.389);
+}
+
+.github-button:hover {
+  background: rgba(59, 130, 246, 0.4);
+  border-color: rgba(59, 130, 246, 0.5);
+  color: rgb(224, 242, 254); 
+}
 
   .link-icon {
     @apply h-5 w-5;

@@ -78,6 +78,9 @@ const nextPost =
   </div>
   <main id="main-content">
     <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
+    <div class="author text-blue-300 text-base font-medium mb-2">
+      Author • {author}
+    </div>
     <Datetime
       pubDatetime={pubDatetime}
       modDatetime={modDatetime}
@@ -115,68 +118,65 @@ const nextPost =
     <hr class="my-6 border-dashed" />
 
     <!-- Previous/Next Post Buttons -->
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-      {
-        prevPost && (
-          <a
-            href={`/posts/${prevPost.slug}`}
-            class="flex w-full gap-1 hover:opacity-75"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left flex-none"
-            >
-              <>
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M15 6l-6 6l6 6" />
-              </>
-            </svg>
-            <div>
-              <span>Previous Post</span>
-              <div class="text-sm text-skin-accent/85">{prevPost.title}</div>
-            </div>
-          </a>
-        )
-      }
-      {
-        nextPost && (
-          <a
-            href={`/posts/${nextPost.slug}`}
-            class="flex w-full justify-end gap-1 text-right hover:opacity-75 sm:col-start-2"
-          >
-            <div>
-              <span>Next Post</span>
-              <div class="text-sm text-skin-accent/85">{nextPost.title}</div>
-            </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right flex-none"
-            >
-              <>
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 6l6 6l-6 6" />
-              </>
-            </svg>
-          </a>
-        )
-      }
-    </div>
+    <!-- Previous/Next Post Buttons -->
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+  {
+    prevPost && (
+      <a
+        href={`/posts/${prevPost.slug}`}
+        class="flex w-full gap-1 hover:opacity-75 bg-white/10 dark:bg-black/10 border border-white/20 dark:border-black/20 rounded-lg p-4 shadow-sm transition-all duration-300"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left flex-none"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M15 6l-6 6l6 6" />
+        </svg>
+        <div>
+          <span>Previous Post</span>
+          <div class="text-sm text-skin-accent/85">{prevPost.title}</div>
+        </div>
+      </a>
+    )
+  }
+  {
+    nextPost && (
+      <a
+        href={`/posts/${nextPost.slug}`}
+        class="flex w-full justify-end gap-1 text-right hover:opacity-75 sm:col-start-2 bg-white/10 dark:bg-black/10 border border-white/20 dark:border-black/20 rounded-lg p-4 transition-all duration-300"
+      >
+        <div>
+          <span>Next Post</span>
+          <div class="text-sm text-skin-accent/85">{nextPost.title}</div>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right flex-none"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M9 6l6 6l-6 6" />
+        </svg>
+      </a>
+    )
+  }
+</div>
   </main>
   <Footer />
 </Layout>
@@ -187,6 +187,21 @@ const nextPost =
   }
   .post-title {
     @apply text-2xl font-semibold text-skin-accent;
+  }
+  .author {
+    @apply text-blue-300 text-base font-medium mb-2;
+  }
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for light mode */
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Padding */
+    transition: all 0.3s ease; /* Smooth hover transition */
+  }
+  .dark .glassmorphism {
+    background: rgba(0, 0, 0, 0.1); /* Semi-transparent black for dark mode */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Dark mode border */
   }
 </style>
 

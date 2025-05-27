@@ -51,8 +51,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     <Hr />
 
     <section id="projects">
-      <h2>Projects</h2>
-      <h5 style="margin-bottom: 18px; margin-top: -12px">My Personal Project</h5>
+      <h2>Personal <span style="color: rgb(var(--color-accent));">Projects</span></h2>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
         {
           projects.map(project => (
@@ -74,8 +73,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     {
       recentPosts.length > 0 && (
         <section id="recent-posts">
-          <h2>Recent Posts</h2>
-          <h5>My Blog Posts</h5>
+          <h2>Recent <span style="color: rgb(var(--color-accent));">Posts</span></h2>
           <ul>
             {recentPosts.map(
               ({ data, slug }, index) =>
