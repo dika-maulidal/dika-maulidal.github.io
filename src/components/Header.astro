@@ -10,9 +10,9 @@ export interface Props {
 const { activeNav } = Astro.props;
 ---
 
-<header id="navbar" class="sticky top-0 z-50 transition-all duration-300 bg-transparent">
+<header id="navbar" class="sticky top-0 z-50 transition-all duration-300 bg-transparent mt-4">
   <a id="skip-to-content" href="#main-content">Skip to content</a>
-  <div class="nav-container">
+  <div class="nav-container border-primary rounded-lg">
     <div class="top-nav-wrap">
       <a href="/" class="logo whitespace-nowrap">
         {
@@ -249,12 +249,11 @@ const { activeNav } = Astro.props;
     if (window.scrollY > 10) {
       navbar.classList.remove('bg-transparent');
       navbar.classList.add(
-        'bg-blue-500/20',   // Glassmorphism biru
-        'backdrop-blur-md',  // Efek blur
-        'border-blue-300/30', // Border biru transparan
+       // 'backdrop-blur-md',
+        'border-blue-300/30' // Border biru transparan
       );
     } else {
-      navbar.classList.remove('bg-blue-500/20', 'backdrop-blur-md', 'border-blue-300/30');
+      navbar.classList.remove('backdrop-blur-md', 'border-blue-300/30');
       navbar.classList.add('bg-transparent');
     }
   });
