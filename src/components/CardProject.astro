@@ -86,72 +86,102 @@ const techIcons: Record<string, string> = {
 
 <style>
   .project-card {
-    @apply mb-6 rounded-lg p-4 shadow-md;
-    background: rgba(59, 130, 246, 0.1); /* Glassmorphism biru (blue-500) */
-    border: 1px solid rgba(59, 130, 246, 0.3); /* Border biru transparan */
-  }
+  @apply mb-6 rounded-xl p-5;
+  background: rgba(59, 130, 246, 0.10); /* blue-500/10 */
+border: 1px solid rgba(147, 197, 253, 0.20); /* blue-300/20 */
+/* box-shadow: 0 10px 25px rgba(77, 93, 255, 0.25); */
 
-  .image-frame {
-    @apply h-48 w-full rounded overflow-hidden;
-  }
 
-  .project-image {
-    @apply h-full w-full object-cover transition-transform duration-300 hover:scale-105;
-  }
-
-  .project-title {
-    @apply text-xl font-semibold text-blue-100; /* Biru muda untuk judul */
-  }
-
-  .project-description {
-    @apply text-blue-300; /* Biru sedang untuk deskripsi */
-  }
-
-  .tech-list {
-    @apply flex flex-wrap gap-2;
-  }
-
-  .tech-item {
-    @apply flex items-center rounded-sm bg-blue-300/40 border border-blue-300/40 px-2 py-0.5 text-xs text-blue-50;
-    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-  }
-
-  .tech-icon {
-    @apply mr-1 h-4 w-4;
-  }
-
-  .tech-icon.placeholder {
-    @apply inline-block text-center text-blue-100;
-  }
-
-  .project-links {
-    @apply flex gap-4;
-  }
-
-  .link-button {
-    @apply flex items-center gap-2 rounded-md border border-blue-300/20 px-3 py-1 text-sm text-blue-100;
-    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-  }
-
-  .preview-button {
-    background: rgba(59, 130, 246, 0.15); 
-  }
-
-  .preview-button:hover {
-    @apply bg-blue-500/30 border-blue-500/40 text-blue-50;
-  }
-
-.github-button {
-  background: rgba(0, 64, 255, 0.389);
+  /* 👇 tambahin ini */
+  transform: translateY(0);
+  transition:
+    transform .3s ease,
+    border-color .25s ease,
+    box-shadow .25s ease;
 }
 
-.github-button:hover {
-  background: rgba(59, 130, 246, 0.4);
-  border-color: rgba(59, 130, 246, 0.5);
-  color: rgb(224, 242, 254); 
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(147, 197, 253, 0.6);
+  background: rgba(59, 130, 246, 0.15);
+  /* box-shadow: 0 12px 30px rgba(77, 93, 255, 0.35); */
 }
 
-  .link-icon {
-    @apply h-5 w-5;
-  }
+
+
+/* Image */
+.image-frame {
+  @apply h-48 w-full rounded-lg overflow-hidden border;
+  border-color: rgba(96,165,250,.2);
+}
+
+.project-image {
+  @apply h-full w-full object-cover transition-transform duration-500;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.04);
+}
+
+/* Title */
+.project-title {
+  @apply text-lg font-semibold tracking-wide;
+  color: #e5edff;
+  text-shadow: 0 0 8px rgba(96,165,250,.35);
+}
+
+/* Description */
+.project-description {
+  color: #9fb3d9;
+  font-size: .95rem;
+}
+
+/* Tech tags */
+.tech-list {
+  @apply flex flex-wrap gap-2;
+}
+
+.tech-item {
+  @apply flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium;
+  background: rgba(59, 130, 246, 0.12);   /* blue-500/12 */
+  border: 1px solid rgba(147, 197, 253, 0.25);
+  color: #dbeafe;
+  transition: all .2s ease;
+}
+
+.tech-item:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(147, 197, 253, 0.5);
+}
+
+
+.tech-icon {
+  @apply h-4 w-4 opacity-90;
+}
+
+/* Buttons */
+.project-links {
+  @apply flex gap-3 pt-2;
+}
+
+.link-button {
+  @apply flex items-center gap-2 rounded-md px-3 py-1 text-sm;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(147, 197, 253, 0.3);
+  color: #dbeafe;
+  transition: all .25s ease;
+}
+
+.link-button:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(147, 197, 253, 0.6);
+  box-shadow: 0 0 15px rgba(77, 93, 255, 0.25);
+}
+
+
+.link-icon {
+  @apply h-5 w-5 opacity-80;
+}
+
 </style>

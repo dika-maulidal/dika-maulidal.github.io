@@ -147,7 +147,6 @@ const { activeNav } = Astro.props;
       </nav>
     </div>
   </div>
-  <Hr />
 </header>
 
 <style>
@@ -190,7 +189,7 @@ const { activeNav } = Astro.props;
     @apply col-span-1;
   }
   nav .active {
-    @apply underline decoration-wavy decoration-blue-300 decoration-2 underline-offset-4;
+    @apply underline decoration-solid decoration-blue-400 decoration-2 underline-offset-4 font-bold;
   }
   nav a.active svg {
     @apply stroke-blue-300;
@@ -249,7 +248,7 @@ const { activeNav } = Astro.props;
     if (window.scrollY > 10) {
       navbar.classList.remove('bg-transparent');
       navbar.classList.add(
-       // 'backdrop-blur-md',
+        'backdrop-blur-md',
         'border-blue-300/30' // Border biru transparan
       );
     } else {

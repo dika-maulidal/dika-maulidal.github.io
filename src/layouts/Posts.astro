@@ -2,7 +2,6 @@
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
 import Pagination from "@components/Pagination.astro";
 import Card from "@components/Card";
 import { SITE } from "@config";
@@ -18,17 +17,19 @@ const { page } = Astro.props;
 
 <Layout title={`Posts | ${SITE.title}`}>
   <Header activeNav="posts" />
-  <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
-    <ul>
-      {
-        page.data.map(({ data, slug }) => (
-          <Card href={`/posts/${slug}/`} frontmatter={data} />
-        ))
-      }
-    </ul>
-  </Main>
+  <main id="main-content">
+    <section class="pb-6 pt-12">
+      <h1 class="text-2xl font-semibold tracking-wide">Posts</h1>
+      <p class="mt-2 italic">All the articles I've posted.</p>
+      <ul class="mt-8">
+        {
+          page.data.map(({ data, slug }) => (
+            <Card href={`/posts/${slug}/`} frontmatter={data} />
+          ))
+        }
+      </ul>
+    </section>
+  </main>
 
   <Pagination {page} />
-
-  <Footer noMarginTop={page.lastPage > 1} />
 </Layout>

@@ -3,15 +3,25 @@
 @tailwind utilities;
 
 @layer base {
-  :root,
-  html[data-theme="dark"] {
-    --color-fill: 0, 1, 35;
-    --color-accent: 97, 123, 255;
-    --color-text-base: 234, 237, 243;
-    --color-card: 33, 34, 83;
-    --color-card-muted: 12, 14, 79;
-    --color-border: 48, 63, 138;
-  }
+:root,
+html[data-theme="dark"] {
+  /* Deep forensic navy background */
+  --color-fill: 5, 10, 20;            /* #050a14 */
+
+  /* Steel forensic blue accent */
+  --color-accent: 96, 165, 250;       /* #60A5FA */
+
+  /* Cold digital white */
+  --color-text-base: 226, 232, 255;   /* #e2e8ff */
+
+  /* Dark acrylic panels */
+  --color-card: 15, 23, 42;           /* #0f172a */
+  --color-card-muted: 10, 16, 32;     /* #0a1020 */
+
+  /* Forensic UI borders */
+  --color-border: 96, 165, 250;       /* accent used with opacity */
+}
+
   html[data-theme="dark"] {
     --color-fill: 0, 1, 35;
     --color-accent: 97, 123, 255;
@@ -23,7 +33,6 @@
   .border-primary {
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   .rounded-lg {
@@ -40,10 +49,11 @@
   body {
     @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base selection:bg-skin-accent/70 selection:text-skin-inverted;
   
-    background-image: radial-gradient(
-      ellipse 80% 80% at 50% -20%,
-      rgba(97, 123, 255, 0.15),
-      rgba(var(--color-fill), 0.9)
+    background-image: linear-gradient(
+      to bottom,
+      #0c142d,
+      #1c2c54,
+      #040610
     );
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -89,6 +99,7 @@
   /* ===== scrollbar ===== */
   html {
     overflow-y: scroll;
+    scroll-behavior: smooth;
   }
 
   /* width */
@@ -141,5 +152,30 @@
   }
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
+  }
+  .all-posts-btn-wrapper {
+    @apply my-12 flex justify-center;
+  }
+  .all-posts-btn {
+    @apply
+      inline-flex items-center gap-2
+      rounded-full
+      px-6 py-3
+      text-sm font-medium
+      text-blue-100
+      bg-blue-500/10
+      border border-blue-300/25
+      transition-all duration-300 ease-out
+      hover:-translate-y-[2px]
+      hover:bg-blue-500/20
+      hover:border-blue-300/45
+      hover:text-blue-50
+      hover:shadow-[0_6px_20px_rgba(77,93,255,0.25)];
+  }
+  .all-posts-icon {
+    @apply h-4 w-4 transition-transform duration-300;
+  }
+  .all-posts-btn:hover .all-posts-icon {
+    transform: translateX(6px);
   }
 }
