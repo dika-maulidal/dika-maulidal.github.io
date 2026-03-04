@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dika Maulidal</title>
+
+    <meta
+      name="description"
+      content="Digital Forensics · OSINT · Cybersecurity Researcher"
+    />
+
+    <meta property="og:title" content="Dika Maulidal" />
+    <meta
+      property="og:description"
+      content="Cyber · OSINT · Digital Forensics"
+    />
+    <meta property="og:image" content="https://dikamaulidal.me/og.png" />
+    <meta property="og:url" content="https://dikamaulidal.me" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #050b1e;
+        --text: #dbe7ff;
+        --muted: #7f9cff;
+        --accent: #4f7cff;
+        --border: rgba(79, 124, 255, 0.25);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: radial-gradient(circle at top, #0a1440, var(--bg));
+        color: var(--text);
+        font-family: "JetBrains Mono", monospace;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        max-width: 720px;
+        width: 100%;
+        padding: 40px 24px;
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        padding: 32px;
+        background: rgba(10, 20, 64, 0.35);
+        backdrop-filter: blur(6px);
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: var(--accent);
+        margin-bottom: 8px;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+        color: var(--muted);
+        margin-bottom: 24px;
+      }
+
+      .divider {
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          var(--accent),
+          transparent
+        );
+        margin: 24px 0;
+        opacity: 0.4;
+      }
+
+      p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 16px;
+      }
+
+      .mono {
+        color: var(--muted);
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      .links a {
+        text-decoration: none;
+        color: var(--accent);
+        font-size: 0.85rem;
+        position: relative;
+      }
+
+      .links a::before {
+        content: ">";
+        margin-right: 6px;
+        color: var(--muted);
+      }
+
+      footer {
+        margin-top: 32px;
+        font-size: 0.75rem;
+        color: var(--muted);
+        opacity: 0.7;
+      }
+
+      .quote {
+        margin-top: 24px;
+        padding-left: 16px;
+        border-left: 2px solid var(--border);
+        font-size: 0.85rem;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      .quote span {
+        display: block;
+        margin-top: 6px;
+        font-size: 0.75rem;
+        opacity: 0.7;
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.4rem;
+        }
+        .card {
+          padding: 24px;
+        }
+      }
+
+      .links a:hover {
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>Dika Maulidal</h1>
+        <div class="subtitle">cyber · osint · digital forensics</div>
+
+        <div class="divider"></div>
+
+        <p>
+          I build things quietly.
+          <span class="mono">scripts, tools, notes, and traces.</span>
+        </p>
+
+        <p>
+          This site exists only as an identifier. No trackers. No noise. Just
+          presence.
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="mono">
+          interested in: investigation, detection, analysis, learning by doing.
+        </p>
+        <p class="mono">
+          focused on windows artifacts, timeline analysis, and incident
+          response.
+        </p>
+        <div class="divider"></div>
+
+        <div class="quote">
+          “Every contact leaves a trace.”
+          <span>— Edmond Locard, forensic science principle</span>
+        </div>
+
+        <div class="links">
+          <a href="https://github.com/dika-maulidal">github</a>
+          <a href="https://blog.dikamaulidal.me">blog</a>
+          <a href="https://notes.dikamaulidal.me">notes</a>
+          <a href="#">contact</a>
+        </div>
+
+        <footer>last surface update: 2026.03</footer>
+      </section>
+    </main>
+  </body>
+</html>
