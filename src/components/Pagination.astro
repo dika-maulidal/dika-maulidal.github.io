@@ -1,0 +1,124 @@
+---
+import type { Page } from "astro";
+import LinkButton from "./LinkButton.astro";
+import type { CollectionEntry } from "astro:content";
+
+export interface Props {
+  page: Page<CollectionEntry<"blog">>;
+}
+
+const { page } = Astro.props;
+---
+
+{
+  page.lastPage > 1 && (
+    <nav
+      class="pagination-wrapper"
+      aria-label="Pagination"
+    >
+      {/* Previous */}
+      <LinkButton
+  disabled={!page.url.prev}
+  href={page.url.prev as string}
+  ariaLabel="Previous page"
+  className="pagination-btn group is-prev"
+>
+
+       <svg
+  xmlns="http://www.w3.org/2000/svg"
+  class="pagination-icon"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+>
+  <path d="M15.5 5 7.5 12l8 7V5z" />
+</svg>
+
+        <span class="hidden sm:inline">Prev</span>
+      </LinkButton>
+
+      {/* Page indicator */}
+      <span
+        class="pagination-indicator"
+        aria-live="polite"
+      >
+        {page.currentPage}
+        <span class="opacity-50 mx-1">/</span>
+        {page.lastPage}
+      </span>
+
+      {/* Next */}
+      <LinkButton
+  disabled={!page.url.next}
+  href={page.url.next as string}
+  ariaLabel="Next page"
+  className="pagination-btn group is-next"
+>
+
+
+        <span class="hidden sm:inline">Next</span>
+        <svg
+  xmlns="http://www.w3.org/2000/svg"
+  class="pagination-icon"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+>
+  <path d="M8.5 5 16.5 12l-8 7V5z" />
+</svg>
+
+      </LinkButton>
+    </nav>
+  )
+}
+
+
+<style>
+ .pagination-wrapper {
+  @apply mt-10 mb-8 flex items-center justify-center gap-4;
+}
+
+.pagination-btn {
+  @apply
+    inline-flex items-center gap-2
+    rounded-full
+    px-4 py-2
+    text-sm font-medium
+    text-blue-100
+    bg-blue-500/10
+    border border-blue-300/25
+    transition-all duration-300 ease-out
+    hover:-translate-y-[2px]
+    hover:bg-blue-500/20
+    hover:border-blue-300/45
+    hover:text-blue-50
+    hover:shadow-[0_6px_20px_rgba(77,93,255,0.25)];
+}
+
+.pagination-btn[aria-disabled="true"] {
+  @apply pointer-events-none opacity-40;
+}
+
+.pagination-icon {
+  @apply h-4 w-4 transition-transform duration-300;
+}
+
+/* Prev → kiri */
+.is-prev:hover .pagination-icon {
+  transform: translateX(-4px);
+}
+
+/* Next → kanan */
+.is-next:hover .pagination-icon {
+  transform: translateX(4px);
+}
+
+.pagination-indicator {
+  @apply
+    min-w-[64px]
+    text-center
+    text-sm
+    font-medium
+    text-blue-200
+    opacity-80;
+}
+
+</style>
