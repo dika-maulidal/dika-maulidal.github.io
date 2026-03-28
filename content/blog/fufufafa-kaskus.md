@@ -10,8 +10,7 @@ tags:
   - text-mining
 ---
 
-Di tengah hiruk pikuk media sosial, munculnya kontroversi seputar akun Fufufafa di platform Kaskus telah menarik perhatian publik Indonesia. Tanpa bermaksud mengungkap identitas pemilik akun, artikel ini akan fokus pada analisis konten tekstual dari postingan-postingan yang dibuat.
-<!--more-->
+Di tengah hiruk pikuk media sosial, munculnya kontroversi seputar akun Fufufafa di platform Kaskus telah menarik perhatian publik Indonesia. <!--more--> Tanpa bermaksud mengungkap identitas pemilik akun, artikel ini akan fokus pada analisis konten tekstual dari postingan-postingan yang dibuat.
 
 
 ## **Pengumpulan Data**  

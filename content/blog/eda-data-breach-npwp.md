@@ -10,8 +10,8 @@ tags:
   - data-breach
 ---
 
-Pada bulan September tanggal 18 2024, publik dihebohkan dengan dugaan kebocoran data terkait Nomor Pokok Wajib Pajak (NPWP) yang mencuat setelah seorang pengguna anonim di forum Breachforum.st membagikan informasi tentang data tersebut. Pengguna dengan nama samaran "bjorka" di forum tersebut mengklaim memiliki data pribadi yang mencakup 6 Juta entri.
-<!--more-->
+Pada bulan September tanggal 18 2024, publik dihebohkan dengan dugaan kebocoran data terkait Nomor Pokok Wajib Pajak (NPWP) yang mencuat setelah seorang pengguna anonim di forum Breachforum.st <!--more--> membagikan informasi tentang data tersebut. Pengguna dengan nama samaran "bjorka" di forum tersebut mengklaim memiliki data pribadi yang mencakup 6 Juta entri.
+
 
 ![header](https://naval-csirt.tnial.mil.id/wp-content/uploads/2024/09/Bjorka1.webp)
 

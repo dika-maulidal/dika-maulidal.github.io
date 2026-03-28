@@ -12,8 +12,7 @@ tags:
 
 ![maigret](https://raw.githubusercontent.com/soxoj/maigret/main/static/maigret.png)
 
-**Maigret** adalah alat OSINT (Open Source Intelligence) yang dirancang untuk melakukan pencarian informasi berdasarkan nama pengguna (username) di berbagai layanan online. Alat ini dapat membantu dalam investigasi digital dengan mengumpulkan data yang tersedia secara publik dari berbagai situs web.
-<!--more-->
+**Maigret** adalah alat OSINT (Open Source Intelligence) yang dirancang untuk melakukan pencarian informasi berdasarkan nama pengguna (username) di berbagai layanan online. <!--more--> Alat ini dapat membantu dalam investigasi digital dengan mengumpulkan data yang tersedia secara publik dari berbagai situs web.
 
 ## Table of Contents
 

@@ -3,6 +3,9 @@ title: Dika
 enableGitInfo: true
 
 module:
+  hugoVersion:
+    extended: true
+    min: "0.146.0"
   imports:
     - path: github.com/imfing/hextra
 
@@ -13,9 +16,11 @@ markup:
   highlight:
     noClasses: false
 
+# PENTING: Menambahkan markdown agar fitur "Copy as Markdown" berfungsi
 outputs:
-  home: [html]
-  section: [html, rss]
+  home: [html, llms]
+  page: [html, markdown]
+  section: [html, rss, markdown]
 
 taxonomies:
   tag: tags
@@ -33,8 +38,8 @@ menu:
       pageRef: /blog
       weight: 2
 
-    - name: Docs
-      pageRef: /docs
+    - name: Notes
+      pageRef: /notes
       weight: 3
 
     - name: About
@@ -42,7 +47,7 @@ menu:
       weight: 4
 
     - name: GitHub
-      url: "https://github.com/imfing/hextra-starter-template"
+      url: "https://github.com/dika-maulidal"
       weight: 5
       params:
         icon: github
@@ -60,16 +65,31 @@ params:
     displayLogo: true
 
     logo:
-      path: images/logo.png
-      dark: images/logo-dark.png
+      path: /logo.png
+      dark: /logo-dark.png
 
   footer:
-    displayCopyright: false
+    enable: true
+    displayCopyright: true
     displayPoweredBy: true
+    width: normal
 
   # 🔥 TAMBAHAN PENTING
   displayUpdatedDate: true
   dateFormat: "January 2, 2006"
+
+  # Konfigurasi agar menu "Copy Page" muncul
+  page:
+    width: normal
+    contextMenu:
+      enable: true
+      links:
+        - name: Open in ChatGPT
+          icon: chatgpt
+          url: "https://chatgpt.com/?hints=search&q=I%27m+looking+at+this+documentation%3A+{url}%0AHelp+me+understand+how+to+use+it."
+        - name: Open in Claude
+          icon: claude
+          url: "https://claude.ai/new?q=I%27m+looking+at+this+documentation%3A+{url}%0AHelp+me+understand+how+to+use+it."
 
   blog:
     list:
@@ -85,12 +105,9 @@ params:
     type: flexsearch
 
     flexsearch:
-      # index page by: content | summary | heading | title
       index: content
-      # full | forward | reverse | strict
-      # https://github.com/nextapps-de/flexsearch/#tokenizer-prefix-search
       tokenize: full
 
   editURL:
     enable: true
-    base: "https://github.com/imfing/hextra-starter-template/edit/main/content"
+    base: "https://github.com/dika-maulidal/dika-blog/edit/main/content"

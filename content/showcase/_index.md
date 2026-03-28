@@ -11,40 +11,27 @@ layout: wide
 Projects & tools I built in DFIR, OSINT, and Threat Hunting
 </p>
 
----
-title: Showcase
-description: "Tools & Projects by Dika"
-toc: false
-layout: wide
----
+{{< cards >}}
 
-<div class="hx:mt-4"></div>
+  {{< card
+        link="https://dika-maulidal.github.io/cobarepo/projects/project1.png"
+        title="Profile Finder"
+        image="https://dika-maulidal.github.io/cobarepo/projects/project1.png"
+        imageStyle="object-fit:cover; aspect-ratio:16/9;"
+  >}}
 
-<p class="hx:mb-12 hx:text-center hx:text-lg hx:text-gray-500 hx:dark:text-gray-400">
-Projects & tools I built in DFIR, OSINT, and Threat Hunting
-</p>
+  {{< card
+        link="https://github.com/dika-maulidal/aerotrack"
+        title="Aerotrack"
+        image="https://dika-maulidal.github.io/cobarepo/projects/project2.png"
+        imageStyle="object-fit:cover; aspect-ratio:16/9;"
+  >}}
 
-{{< hextra/feature-grid >}}
+  {{< card
+        link="https://osint.dikamaulidal.me"
+        title="OSINT.PROFILER"
+        image="/images/OSINT.PROFILER.PNG"
+        imageStyle="object-fit:cover; aspect-ratio:16/9;"
+  >}}
 
-{{< hextra/feature-card
-  title="Profile Finder"
-  subtitle="Tool untuk mencari profil digital"
-  image="https://dika-maulidal.github.io/cobarepo/projects/project1.png"
-  link="https://github.com/dika-maulidal/aerotrack"
->}}
-
-{{< hextra/feature-card
-  title="Aerotrack"
-  subtitle="Flight tracking OSINT tool"
-  image="https://dika-maulidal.github.io/cobarepo/projects/project2.png"
-  link="https://github.com/dika-maulidal/aerotrack"
->}}
-
-{{< hextra/feature-card
-  title="OSINT.PROFILER"
-  subtitle="Platform profiling OSINT"
-  image="/images/OSINT.PROFILER.PNG"
-  link="https://osint.dikamaulidal.me"
->}}
-
-{{< /hextra/feature-grid >}}
+{{< /cards >}}

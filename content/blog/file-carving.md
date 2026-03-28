@@ -10,8 +10,8 @@ tags:
   - forensics
 ---
 
-Pernah kepikiran nggak kalau file yang kita hapus pakai **Shift + Delete** itu sebenarnya nggak benar-benar hilang? Di lab ini akan ditunjukkan bagaimana cara mengambil data tersebut kembali secara manual lewat Hex Editor. Prosesnya dilakukan tanpa menggunakan tools otomatis, tapi dengan langsung menganalisis isi mentah (raw data) dari disk.
-<!--more-->
+Pernah kepikiran nggak kalau file yang kita hapus pakai **Shift + Delete** itu sebenarnya nggak benar-benar hilang? <!--more--> Di lab ini akan ditunjukkan bagaimana cara mengambil data tersebut kembali secara manual lewat Hex Editor. Prosesnya dilakukan tanpa menggunakan tools otomatis, tapi dengan langsung menganalisis isi mentah (raw data) dari disk.
+
 
 ### Apa itu File Carving?
 

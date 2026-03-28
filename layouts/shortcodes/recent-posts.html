@@ -1,0 +1,41 @@
+<div style="margin-top:12px; display:flex; flex-direction:column;">
+
+  {{ $posts := (where .Site.RegularPages "Section" "blog") }}
+
+  {{ range first 4 $posts }}
+  <div style="display:flex; flex-direction:column; margin-bottom:24px;">
+
+    <!-- Date -->
+    <div style="font-size:16px; font-weight:700; color:#4b5563;">
+      {{ .Date.Format "Jan 02, 2006" }}
+    </div>
+
+    <!-- Title -->
+    <a href="{{ .RelPermalink }}"
+       style="font-size:16px; color:#2563eb; text-decoration:none; margin-top:2px;"
+       onmouseover="this.style.textDecoration='underline'"
+       onmouseout="this.style.textDecoration='none'">
+      {{ .Title }}
+    </a>
+
+    <!-- Summary -->
+    <div style="font-size:14px; color:#6b7280; font-style:italic; margin-top:2px;">
+      {{ .Summary | plainify }}
+    </div>
+
+  </div>
+  {{ end }}
+
+  <!-- Lihat Semua -->
+  {{ if gt (len $posts) 4 }}
+  <div style="margin-top:8px;">
+    <a href="/blog"
+       style="font-size:14px; color:#6b7280; text-decoration:none;"
+       onmouseover="this.style.textDecoration='underline'"
+       onmouseout="this.style.textDecoration='none'">
+      Lihat Semua Artikel ({{ len $posts }})
+    </a>
+  </div>
+  {{ end }}
+
+</div>

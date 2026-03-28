@@ -1,46 +1,55 @@
-<!-- ---
-title: My Site
+---
+title: 
 toc: false
 ---
 
-This is the landing page.
-
-## Explore
+👋 Halo! Ini adalah ruang eksplorasi saya di dunia **Digital Forensics**, **OSINT**, dan **Keamanan Siber** — berisi catatan, eksperimen, dan pembelajaran yang saya dokumentasikan.
 
 {{< cards >}}
-  {{< card link="docs" title="Docs" icon="book-open" >}}
-  {{< card link="about" title="About" icon="user" >}}
+  {{< card link="blog" title="Blog" icon="chat-alt-2" >}}
+  {{< card link="docs" title="Notes" icon="academic-cap" >}}
+  {{< card link="showcase" title="Projects" icon="collection" >}}
+  {{< card link="about" title="About Me" icon="information-circle" >}}
 {{< /cards >}}
 
-## Documentation
-
-For more information, visit [Hextra](https://imfing.github.io/hextra). -->
-
----
-title: My Site
-toc: false
 ---
 
-This is the landing page.
+### Recent Posts
 
-## Explore
+{{< recent-posts >}}
 
-{{< hextra/feature-grid >}}
+---
+
+### Notes
+
+<div style="margin-top:12px; display:grid; gap:16px;">
 
 {{< hextra/feature-card
-  title="Docs"
-  subtitle="Lihat dokumentasi"
-  link="/docs"
+    title="Windows Forensics"
+    subtitle="Analisis artefak dan jejak digital di sistem Windows, termasuk Registry, Timeline, dan Memory Forensics."
+    icon="desktop-computer"
+    link="/notes/windows-forensics/"
 >}}
 
 {{< hextra/feature-card
-  title="About"
-  subtitle="Tentang saya"
-  link="/about"
+    title="Linux Forensics"
+    subtitle="Investigasi sistem Linux, log file, dan jejak aktivitas untuk menemukan bukti digital."
+    icon="terminal"
+    link="/notes/linux-forensics/"
 >}}
 
-{{< /hextra/feature-grid >}}
+{{< hextra/feature-card
+    title="OSINT"
+    subtitle="Pengumpulan intelijen dari sumber terbuka untuk mendukung investigasi dan threat intelligence."
+    icon="globe-alt"
+    link="/notes/osint/"
+>}}
 
-## Documentation
+{{< hextra/feature-card
+    title="Incident Response"
+    subtitle="Proses identifikasi, analisis, dan mitigasi insiden keamanan siber, termasuk praktik Blue Team."
+    icon="shield-check"
+    link="/notes/incident-response/"
+>}}
 
-For more information, visit [Hextra](https://imfing.github.io/hextra).
+</div>
