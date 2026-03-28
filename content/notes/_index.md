@@ -1,5 +1,6 @@
 ---
 title: Notes
+type : docs
 ---
 
 Selamat datang di repositori dokumentasi teknis. Pilih kategori di bawah ini untuk mulai mengeksplorasi artefak forensik, metodologi investigasi, dan teknik keamanan siber.
