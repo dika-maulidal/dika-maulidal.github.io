@@ -1,18 +1,17 @@
 ---
-title: Documentation
-next: first-page
+title: Notes
 ---
 
-This is a demo of the theme's documentation layout.
+Selamat datang di repositori dokumentasi teknis. Pilih kategori di bawah ini untuk mulai mengeksplorasi artefak forensik, metodologi investigasi, dan teknik keamanan siber.
 
-## Hello, World!
+<!--more-->
 
-```go {filename="main.go"}
-package main
+{{< cards >}}
+  {{< card link="windows-forensics" title="Windows Forensics" icon="desktop-computer" >}}
+  {{< card link="linux-forensics" title="Linux Forensics" icon="terminal" >}}
+  {{< card link="osint" title="OSINT" icon="globe" >}}
+  {{< card link="incident-response" title="Incident Response" icon="shield-check" >}}
+  {{< card link="offensive" title="Offensive Security" icon="fire" >}}
+{{< /cards >}}
 
-import "fmt"
 
-func main() {
-    fmt.Println("Hello, World!")
-}
-```

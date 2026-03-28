@@ -22,7 +22,12 @@ toc: false
 
 ### Notes
 
-<div style="margin-top:12px; display:grid; gap:16px;">
+<div style="
+  margin-top:12px;
+  display:grid;
+  gap:16px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+">
 
 {{< hextra/feature-card
     title="Windows Forensics"
