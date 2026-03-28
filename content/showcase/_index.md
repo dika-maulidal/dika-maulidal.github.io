@@ -30,7 +30,7 @@ Projects & tools I built in DFIR, OSINT, and Threat Hunting
   {{< card
         link="https://osint.dikamaulidal.me"
         title="OSINT.PROFILER"
-        image="/images/OSINT.PROFILER.PNG"
+        image="/images/OSINT.PROFILER.png"
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
   >}}
 
