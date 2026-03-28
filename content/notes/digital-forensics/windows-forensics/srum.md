@@ -2,6 +2,7 @@
 title: "Srum"
 date: 2026-03-28T22:15:56+07:00
 type: docs
+draft: false
 ---
 
 **System Resource Usage Monitor (SRUM)** diperkenalkan sejak Windows 8. SRUM mencatat riwayat penggunaan sumber daya sistem selama 30 hingga 60 hari , mencakup penggunaan aplikasi terperinci, konsumsi energi, konektivitas jaringan, dan notifikasi push. Data ini juga merupakan sumber informasi bagi tab App History di Task Manager.

@@ -1,7 +1,7 @@
 ---
 title: "Jump Lists"
 date: 2026-03-28T22:15:42+07:00
-draft: true
+draft: false
 type : docs
 ---
 
