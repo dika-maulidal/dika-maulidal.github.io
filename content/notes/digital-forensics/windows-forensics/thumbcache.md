@@ -13,7 +13,7 @@ type: docs
 <table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td><strong>Location / Path</strong></td><td><pre><code>C:\Users[Username]\AppData\Local\Microsoft\Windows\Explorer
 </code></pre></td></tr><tr><td><strong>Format</strong></td><td>Binary Database (<code>.db</code>)</td></tr><tr><td><strong>OS Version</strong></td><td>Windows Vista, 7, 8, 10, 11</td></tr><tr><td><strong>Key Files</strong></td><td><code>thumbcache_*.db</code> dan <code>thumbcache_idx.db</code> (Index)</td></tr><tr><td><strong>Forensic Value</strong></td><td>Membuktikan eksistensi file (terutama gambar/video) meskipun file asli telah dihapus dari disk.</td></tr><tr><td><strong>Example</strong></td><td><img src="https://3379135436-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F4pfT5vR8uE4ISAa7XuPV%2Fuploads%2FyAw5gYq3PD75ZLv8stz2%2Fimage.png?alt=media&#x26;token=9fc335c6-a8a2-4dd4-b0ae-67369550e7d8" alt="" data-size="original"></td></tr></tbody></table>
 
-### Digital Forensics Value
+## Digital Forensics Value
 
 Thumbnail cache adalah "harta karun" bagi investigator, terutama dalam kasus yang melibatkan konten ilegal atau penghapusan bukti. Investigator dapat:
 
@@ -21,7 +21,7 @@ Thumbnail cache adalah "harta karun" bagi investigator, terutama dalam kasus yan
 * I**dentifikasi Metadata**: Analisis ThumbCache menghasilkan informasi seperti metadata file asli, Cache ID, checksum header, tipe data, dan ukuran data.
 * **Bukti Pengetahuan (Knowledge)**: Menunjukkan bahwa file tersebut memang pernah ada di sistem dan pernah dilihat oleh pengguna melalui Windows Explorer.
 
-### Struktur & Ukuran ThumbCache
+## Struktur & Ukuran ThumbCache
 
 Windows menyimpan thumbnail dalam berbagai ukuran piksel untuk mendukung berbagai mode tampilan (Small, Medium, Large, Extra Large icons).
 
@@ -29,7 +29,7 @@ Windows menyimpan thumbnail dalam berbagai ukuran piksel untuk mendukung berbaga
 * Windows 10/11: Memiliki rentang lebih luas, mulai dari 16 piksel hingga 2560 piksel.
 * Index File: `thumbcache_idx.db` berfungsi sebagai navigasi yang berisi *pointers* ke lokasi sub-rekaman di dalam file database utama.
 
-#### Komponen Rekaman (Record)
+### Komponen Rekaman (Record)
 
 Setiap entri di dalam file `.db` mengandung:
 
@@ -38,9 +38,9 @@ Setiap entri di dalam file `.db` mengandung:
 * Data Checksum: Digunakan untuk validasi integritas data.
 * Data Offset & Size: Lokasi dan ukuran gambar thumbnail di dalam database.
 
-### Prosedur Ekstraksi & Analisis
+## Prosedur Ekstraksi & Analisis
 
-#### 1. Ekstraksi dengan KAPE atau FTK Imager
+### 1. Ekstraksi dengan KAPE atau FTK Imager
 
 Karena file ini berada di dalam profil pengguna, pastikan Anda mengambil seluruh isi folder Explorer untuk mendapatkan database dan indeksnya:
 
@@ -50,7 +50,7 @@ Karena file ini berada di dalam profil pengguna, pastikan Anda mengambil seluruh
 
 1. Ambil semua file dengan awalan `thumbcache_*.db`.
 
-#### 2. Analisis Menggunakan ThumbCache Viewer
+### 2. Analisis Menggunakan ThumbCache Viewer
 
 Gunakan tool khusus untuk melihat isi gambar di dalam database:
 
@@ -63,7 +63,7 @@ Gunakan tool khusus untuk melihat isi gambar di dalam database:
 
 <figure><img src="https://3379135436-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F4pfT5vR8uE4ISAa7XuPV%2Fuploads%2FfkjTxRnxBo2k4XNQz8YG%2Fimage.png?alt=media&#x26;token=9ae9564c-7c4a-4724-89bd-a4c35ff53ccd" alt="" width="375"><figcaption></figcaption></figure>
 
-### Tools yang Direkomendasikan
+## Tools yang Direkomendasikan
 
 | Tool                  | Deskripsi                                                                 |
 | --------------------- | ------------------------------------------------------------------------- |

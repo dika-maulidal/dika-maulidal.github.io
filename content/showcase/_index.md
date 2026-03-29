@@ -8,7 +8,7 @@ layout: wide
 <div class="hx:mt-4"></div>
 
 <p class="hx:mb-12 hx:text-center hx:text-lg hx:text-gray-500 hx:dark:text-gray-400">
-Projects & tools I built in DFIR, OSINT, and Threat Hunting
+Projects & Tools in Digital Forensics, OSINT, and Threat Hunting
 </p>
 
 {{< cards >}}
@@ -16,14 +16,14 @@ Projects & tools I built in DFIR, OSINT, and Threat Hunting
   {{< card
         link="https://dika-maulidal.github.io/cobarepo/projects/project1.png"
         title="Profile Finder"
-        image="https://dika-maulidal.github.io/cobarepo/projects/project1.png"
+        image="/images/project1.png"
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
   >}}
 
   {{< card
         link="https://github.com/dika-maulidal/aerotrack"
         title="Aerotrack"
-        image="https://dika-maulidal.github.io/cobarepo/projects/project2.png"
+        image="/images/project2.png"
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
   >}}
 

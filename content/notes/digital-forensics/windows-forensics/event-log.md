@@ -9,7 +9,7 @@ Dokumen ini berisi daftar Event ID penting untuk analisis forensik dan monitorin
 
 ***
 
-### 🛡️ Security Event IDs
+## Security Event IDs
 
 Daftar Event ID yang tercatat pada log **Security**.
 
@@ -37,7 +37,7 @@ Daftar Event ID yang tercatat pada log **Security**.
 
 ***
 
-### 🔑 Kode Tipe Logon (Logon Type Codes)
+## Kode Tipe Logon (Logon Type Codes)
 
 Digunakan untuk mengidentifikasi bagaimana cara pengguna melakukan login pada Event ID 4624.&#x20;
 
@@ -57,11 +57,11 @@ Digunakan untuk mengidentifikasi bagaimana cara pengguna melakukan login pada Ev
 
 ***
 
-### ⚙️ System, Application, & ESENT
+## System, Application, & ESENT
 
 Log yang berkaitan dengan stabilitas sistem dan aplikasi.
 
-#### System Event IDs
+### System Event IDs
 
 | Event ID | Deskripsi                                                        |
 | -------- | ---------------------------------------------------------------- |
@@ -70,18 +70,17 @@ Log yang berkaitan dengan stabilitas sistem dan aplikasi.
 | **7009** | Waktu tunggu (timeout) tercapai saat menunggu layanan terhubung. |
 | **104**  | File log dibersihkan (System, Application, dll).                 |
 
-#### Application Event IDs
+### Application Event IDs
 
 | Event ID | Deskripsi                               |
 | -------- | --------------------------------------- |
 | **1000** | Application Error (Error Aplikasi).     |
 | **1002** | Application Hang (Aplikasi Hang/Macet). |
 
-{% hint style="success" %}
-**Catatan:** Perangkat lunak pihak ketiga (seperti Antivirus) juga dapat menulis ke log ini.
-{% endhint %}
+> [!NOTE]
+> **Catatan:** Perangkat lunak pihak ketiga (seperti Antivirus) juga dapat menulis ke log ini.
 
-#### ESENT (Database Engine)
+### ESENT (Database Engine)
 
 | Event ID | Deskripsi                                      |
 | -------- | ---------------------------------------------- |
@@ -92,9 +91,9 @@ Log yang berkaitan dengan stabilitas sistem dan aplikasi.
 
 ***
 
-### 💻 PowerShell & Task Scheduler
+## PowerShell & Task Scheduler
 
-#### PowerShell
+### PowerShell
 
 | Event ID | Deskripsi                                         |
 | -------- | ------------------------------------------------- |
@@ -102,11 +101,10 @@ Log yang berkaitan dengan stabilitas sistem dan aplikasi.
 | **600**  | Provider "x" dimulai.                             |
 | **4104** | Pembuatan teks Scriptblock (Scriptblock Logging). |
 
-{% hint style="info" %}
-Event 4104 aktif secara default di PowerShell v5+ untuk skrip berbahaya (log sebagai peringatan).
-{% endhint %}
+> [!TIP]
+> Event 4104 aktif secara default di PowerShell v5+ untuk skrip berbahaya (log sebagai peringatan).
 
-#### Task Scheduler
+### Task Scheduler
 
 | Event ID | Deskripsi                                   |
 | -------- | ------------------------------------------- |
@@ -117,7 +115,7 @@ Event 4104 aktif secara default di PowerShell v5+ untuk skrip berbahaya (log seb
 
 ***
 
-### 🛡️ Windows Defender
+## Windows Defender
 
 | Event ID | Deskripsi                                                  |
 | -------- | ---------------------------------------------------------- |
@@ -126,9 +124,9 @@ Event 4104 aktif secara default di PowerShell v5+ untuk skrip berbahaya (log seb
 
 ***
 
-### 🌐 Remote Desktop Services (RDP)
+## Remote Desktop Services (RDP)
 
-#### Local Session Manager & Remote Connection Manager
+### Local Session Manager & Remote Connection Manager
 
 | Event ID | Deskripsi                                                            |
 | -------- | -------------------------------------------------------------------- |
@@ -140,13 +138,13 @@ Event 4104 aktif secara default di PowerShell v5+ untuk skrip berbahaya (log seb
 | **1149** | \[cite\_start]Otentikasi pengguna berhasil (Network Authentication). |
 | **261**  | Listener RDP-Tcp menerima koneksi.                                   |
 
-#### RDP Client (Source Computer)
+### RDP Client (Source Computer)
 
 | Event ID | Deskripsi                                               |
 | -------- | ------------------------------------------------------- |
 | **1029** | Berisi Hash dari username yang digunakan untuk koneksi. |
 
-### References
+## References
 
 1. **13Cubed — Event Log Training**\
    <https://training.13cubed.com>

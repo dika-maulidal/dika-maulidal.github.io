@@ -2,6 +2,7 @@
 title: "Windows Timeline"
 date: 2026-03-28T22:16:00+07:00
 type: docs
+draft : false
 ---
 
 **Windows 10 Timeline** (Activity History) diperkenalkan pada Windows 10 Build 1803 (April 2018 Update). Secara visual, fitur ini dapat diakses oleh pengguna melalui ikon **Task View** di Taskbar atau dengan menekan kombinasi tombol `Windows + Tab`.
@@ -12,7 +13,7 @@ type: docs
 
 Fitur ini bertindak sebagai "mesin waktu" yang memungkinkan pengguna melihat kembali dokumen, aplikasi, atau situs web yang pernah diakses sebelumnya. Jika pengguna masuk dengan Akun Microsoft, aktivitas ini bahkan disinkronkan antar perangkat (Cross-Device).
 
-### Rentang Waktu & Retensi Data
+## Rentang Waktu & Retensi Data
 
 Timeline tidak menyimpan data selamanya. Ada batasan waktu yang berlaku tergantung pada konfigurasi sinkronisasi:
 
@@ -25,7 +26,7 @@ Timeline tidak menyimpan data selamanya. Ada batasan waktu yang berlaku tergantu
 <table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td><strong>Location / Path</strong></td><td><pre><code>C:\Users&#x3C;username>\AppData\Local\ConnectedDevicesPlatform\L.&#x3C;profile_id>\ActivitiesCache.db
 </code></pre></td></tr><tr><td><strong>Format</strong></td><td>SQLite Database (v3)</td></tr><tr><td><strong>Associated Files</strong></td><td><code>ActivitiesCache.db-shm</code>, <code>ActivitiesCache.db-wal</code> (Log transaksi)</td></tr><tr><td><strong>Data Retention</strong></td><td>Default: 3-4 hari (Offline) / Up to 30 hari (jika Sync Cloud aktif)</td></tr><tr><td><strong>Forensic Value</strong></td><td><mark style="color:red;">Sangat Tinggi</mark>; rekonstruksi aktivitas pengguna, pembuktian pembukaan file (bahkan yang sudah dihapus), dan durasi penggunaan aplikasi.</td></tr><tr><td><strong>Example</strong></td><td><img src="https://3379135436-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F4pfT5vR8uE4ISAa7XuPV%2Fuploads%2FE4Kqmk9Lzl8CasbcAYUa%2Fimage.png?alt=media&#x26;token=551dff6f-144d-4253-bbe6-acfad0a1fa7b" alt="" data-size="original"></td></tr></tbody></table>
 
-### Identifikasi Akun & Folder
+## Identifikasi Akun & Folder
 
 Nama folder yang menampung `ActivitiesCache.db` bervariasi tergantung pada metode autentikasi pengguna. Jika terdapat beberapa akun, maka akan ada beberapa file database:
 
@@ -36,7 +37,7 @@ Nama folder yang menampung `ActivitiesCache.db` bervariasi tergantung pada metod
 > [!TIP]
 > **Tips Forensik:** Akun Microsoft Cloud dapat direferensikan silang ke nama akun (email) melalui kunci registry: `NTUSER.DAT\Software\Microsoft\IdentityCRL\UserExtendedProperties`
 
-### Struktur & Tabel Utama
+## Struktur & Tabel Utama
 
 `ActivitiesCache.db` adalah database SQLite yang terdiri dari beberapa tabel:
 
@@ -51,7 +52,7 @@ Nama folder yang menampung `ActivitiesCache.db` bervariasi tergantung pada metod
 > [!NOTE]
 > **Prioritas Analisis:** Tidak semua tabel di atas memiliki nilai investigatif yang sama. Fokus utama dalam forensik biasanya tertuju pada tabel **`Activity`** dan **`ActivityOperation`**.
 
-### Tabel Activity
+## Tabel Activity
 
 Tabel ini merupakan inti dari artefak Timeline, menyimpan detail setiap interaksi pengguna dengan aplikasi, file, atau sistem.
 
@@ -64,7 +65,7 @@ Tabel ini merupakan inti dari artefak Timeline, menyimpan detail setiap interaks
 | **PlatformDeviceId**    | ID unik perangkat. Dapat dikorelasikan dengan jenis perangkat (Desktop, Mobile, Laptop).                                                                                                                                                                   |
 | **Example**             | <img src="https://3379135436-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F4pfT5vR8uE4ISAa7XuPV%2Fuploads%2FdWdWZkHYoBFrx9YEQWS2%2Fimage.png?alt=media&#x26;token=26b29582-c021-496d-88b8-728c570b8941" alt="" data-size="original"> |
 
-#### Detail ActivityType (Kode Aktivitas)
+### Detail ActivityType (Kode Aktivitas)
 
 Memahami `ActivityType` sangat krusial untuk menginterpretasikan perilaku pengguna:
 
@@ -79,14 +80,14 @@ Memahami `ActivityType` sangat krusial untuk menginterpretasikan perilaku penggu
 | **11, 12, 15**   | System Ops     | Operasi internal Windows (Credentials, WiFi, Language).  |
 | **0, 1, 4, 7-9** | Unknown        | Belum terdefinisi secara publik.                         |
 
-#### Korelasi Perangkat (PlatformDeviceId)
+### Korelasi Perangkat (PlatformDeviceId)
 
 ID perangkat yang ditemukan dalam tabel Activity dapat dikorelasikan dengan Registry Windows untuk mengidentifikasi jenis hardware spesifik yang digunakan oleh pengguna saat melakukan aktivitas tersebut.
 
 > [!NOTE]
 > Lokasi Registry: `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\TaskFlow\DeviceCache`
 
-#### Tabel Referensi DeviceType
+### Tabel Referensi DeviceType
 
 Gunakan tabel di bawah ini untuk menentukan jenis perangkat berdasarkan nilai integer yang ditemukan pada kunci registry `DeviceType`:
 
@@ -104,7 +105,7 @@ Gunakan tabel di bawah ini untuk menentukan jenis perangkat berdasarkan nilai in
 | **15** | Windows 10 Laptop  | Perangkat Laptop (Observed)      |
 | **16** | Microsoft Surface  | Tablet/Laptop Surface (Observed) |
 
-#### Contoh Korelasi Registry
+### Contoh Korelasi Registry
 
 Tabel berikut menunjukkan bagaimana menghubungkan data dari database ke Registry untuk memvalidasi asal aktivitas.
 
@@ -120,7 +121,7 @@ Tabel berikut menunjukkan bagaimana menghubungkan data dari database ke Registry
 > **Insight Forensik**: Kemampuan sinkronisasi cloud pada Windows Timeline berarti satu file ActivitiesCache.db bisa berisi riwayat dari banyak perangkat berbeda. Mengidentifikasi PlatformDeviceId adalah langkah krusial untuk membuktikan possession (kepemilikan) dan access (akses) pada perangkat tertentu dalam lingkungan multi-device.
 
 
-### Prosedur Ekstraksi & Analisis
+## Prosedur Ekstraksi & Analisis
 
 Cara termudah untuk menganalisis artefak ini adalah menggunakan tool parser dari Eric Zimmerman.
 
@@ -132,7 +133,7 @@ Cara termudah untuk menganalisis artefak ini adalah menggunakan tool parser dari
    ```
 3. **Review:** Gunakan **Timeline Explorer** untuk membuka hasil CSV. Fokus pada kolom `Payload` dan `Focus Duration` (untuk Type 6) guna menentukan berapa lama pengguna berinteraksi dengan aplikasi tersebut.
 
-### Tools yang Direkomendasikan
+## Tools yang Direkomendasikan
 
 | Tool                        | Deskripsi                                                                                                 |
 | --------------------------- | --------------------------------------------------------------------------------------------------------- |

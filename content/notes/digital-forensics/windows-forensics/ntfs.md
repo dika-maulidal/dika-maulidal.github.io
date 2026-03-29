@@ -5,7 +5,7 @@ draft: false
 type : docs
 ---
 
-### Tabel Master File Table (MFT) System Files
+## Tabel Master File Table (MFT) System Files
 
 MFT berisi rekaman khusus yang mendefinisikan struktur dan metadata dari volume NTFS itu sendiri. Rekaman ini biasanya ditandai dengan simbol $ di awal namanya.
 
@@ -24,8 +24,6 @@ MFT berisi rekaman khusus yang mendefinisikan struktur dan metadata dari volume 
 | 10           | **$UPCASE**  | Tabel karakter besar Unicode untuk membantu pengurutan nama file.                                  |
 | 11           | **$EXTEND**  | Direktori yang berisi file sistem tambahan seperti `$ObjId`, `$Quota`, `$Reparse`, dan `$UsnJrnl`. |
 
-{% hint style="info" %}
-**Catatan Forensik**: Rekaman 0-11 adalah file sistem yang sangat penting. Investigator sering menganalisis $MFT untuk melihat histori penghapusan file dan $UsnJrnl untuk melacak perubahan file pada sistem secara kronologis.
-{% endhint %}
-
+> [!NOTE]
+> **Catatan Forensik**: Rekaman 0-11 adalah file sistem yang sangat penting. Investigator sering menganalisis $MFT untuk melihat histori penghapusan file dan $UsnJrnl untuk melacak perubahan file pada sistem secara kronologis.
 
