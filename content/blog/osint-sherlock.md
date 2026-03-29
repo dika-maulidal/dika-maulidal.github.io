@@ -3,8 +3,8 @@ title: "Cara Menggunakan Sherlock untuk OSINT Berdasarkan Username"
 date: 2024-11-28
 authors:
   - name: Dika
-    link: https://github.com/imfing
-    image: https://github.com/imfing.png
+    link: https://github.com/dika-maulidal
+    image: https://github.com/dika-maulidal.png
 tags:
   - osint
   - privacy

@@ -1,10 +1,10 @@
 ---
-title: "Text Analytics pada Akun FUFUFAFA pada Platform KASKUS"
+title: "Text Analytics pada Akun FUFUFAFA di Platform KASKUS"
 date: 2024-12-04
 authors:
   - name: Dika
-    link: https://github.com/imfing
-    image: https://github.com/imfing.png
+    link: https://github.com/dika-maulidal
+    image: https://github.com/dika-maulidal.png
 tags:
   - text-analytics
   - text-mining

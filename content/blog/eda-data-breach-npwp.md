@@ -3,8 +3,8 @@ title: "Exploration Data Analysis Sample Data Breach NPWP"
 date: 2024-12-24
 authors:
   - name: Dika
-    link: https://github.com/imfing
-    image: https://github.com/imfing.png
+    link: https://github.com/dika-maulidal
+    image: https://github.com/dika-maulidal.png
 tags:
   - data-analysis
   - data-breach

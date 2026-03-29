@@ -57,7 +57,7 @@ jobs:
         run: |
           hugo \
             --gc --minify \
-            --baseURL "https://d4dika.github.io/"
+            --baseURL "https://dikamaulidal.me/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
