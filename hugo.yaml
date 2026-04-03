@@ -110,4 +110,4 @@ params:
 
   editURL:
     enable: true
-    base: "https://github.com/dika-maulidal/dika-blog/edit/main/content"
+    base: "https://github.com/dika-maulidal/dika-maulidal.github.io/edit/main/content"
