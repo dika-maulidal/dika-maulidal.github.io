@@ -112,7 +112,9 @@ options:
 
 ### Reverse Search
 
-#### Username
+{{< tabs >}}
+
+  {{< tab name="Username" icon="user" >}}
 
 Mencari satu username:
 ```bash
@@ -129,9 +131,9 @@ Menggunakan file list username:
 python blackbird.py --username-file usernames.txt
 ```
 
----
+  {{< /tab >}}
 
-#### Email
+  {{< tab name="Email" icon="mail" >}}
 
 Mencari satu email:
 ```bash
@@ -148,6 +150,10 @@ Menggunakan file list email:
 python blackbird.py --email-file emails.txt
 ```
 
+  {{< /tab >}}
+
+{{< /tabs >}}
+
 #### Output Contoh
 
 <figure><img src="https://3379135436-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F4pfT5vR8uE4ISAa7XuPV%2Fuploads%2FcB5RUFRBAurH4uAvrsFs%2Fimage.png?alt=media&#x26;token=586d4f5a-50be-4f59-9935-4d0bc68f526e" alt=""><figcaption><p>Email Output</p></figcaption></figure>
@@ -158,20 +164,33 @@ python blackbird.py --email-file emails.txt
 
 Blackbird mendukung beberapa format export untuk kebutuhan analisis lanjutan.
 
-> #### PDF
-> ```bash
-> python blackbird.py --username target_user --pdf
-> ```
+{{< tabs >}}
 
-> #### CSV
-> ```bash
-> python blackbird.py --username username1 --csv
-> ```
+  {{< tab name="PDF" icon="document" >}}
 
-> #### JSON
-> ```bash
-> python blackbird.py --username username1 --json
-> ```
+```bash
+python blackbird.py --username target_user --pdf
+```
+
+  {{< /tab >}}
+
+  {{< tab name="CSV" icon="table" >}}
+
+```bash
+python blackbird.py --username username1 --csv
+```
+
+  {{< /tab >}}
+
+  {{< tab name="JSON" icon="code" >}}
+
+```bash
+python blackbird.py --username username1 --json
+```
+
+  {{< /tab >}}
+
+{{< /tabs >}}
 
 <figure><img src="https://3379135436-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F4pfT5vR8uE4ISAa7XuPV%2Fuploads%2FrQG7txC26lqESIALcUuf%2Fimage.png?alt=media&#x26;token=684da7d9-fcd0-4675-bcae-c50f17770d3a" alt=""><figcaption><p>Export PDF</p></figcaption></figure>
 
