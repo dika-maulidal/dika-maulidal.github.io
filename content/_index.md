@@ -5,7 +5,7 @@ toc: false
 
 <div style="text-align: center; margin: 40px 0;">
   <h1 style="font-size: 2.6rem; font-weight: 800; margin-bottom: 10px;">
-    Hi, I am <span style="color: #3b82f6;">Dika Maulidal</span>
+    Hi, I am <span style="color: #3b82f6;">Ðika Maulidal</span>
   </h1>
 
    <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; align-items: center;">
